@@ -12,7 +12,14 @@ public class DefaultDemoApi implements DemoApi {
 
 	public List<Demo> getDemos() {
 		System.out.println("rpcContext out 111" + RpcContext.getContext().getAttachment("test"));
-        return Arrays.asList(
+        
+//		try {
+//			Thread.sleep(6000);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+		
+		return Arrays.asList(
                 new Demo(1, "name")
                 , new Demo(2, "name2")
                 , new Demo(3, "name3")

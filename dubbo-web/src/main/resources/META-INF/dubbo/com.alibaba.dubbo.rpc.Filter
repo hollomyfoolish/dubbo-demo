@@ -1,0 +1,2 @@
+tenant=gongyu.dubbo.demo.MyDubboFilter
+timeCalculator=gongyu.dubbo.demo.TimeCalculateFilter

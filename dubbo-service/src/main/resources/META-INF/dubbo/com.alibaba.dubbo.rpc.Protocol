@@ -1,0 +1,2 @@
+hessian-http=org.dubbo.extension.HessianHttpProtocol
+hessian-https=org.dubbo.extension.HessianHttpsProtocol

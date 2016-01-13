@@ -12,10 +12,15 @@
 	<dubbo:registry protocol="zookeeper" address="localhost:2181"
 		file="false" />
 	<!--配置provider的暴露端口号 可以固定 也可以填写-1 -1表示随机保证不冲突，threads把表示配置处理业务的线程池 -->
-	<dubbo:protocol port="28807" threads="20" />
-
+	<!-- <dubbo:protocol port="28807" threads="20" /> -->
+	<dubbo:protocol name="hessian-http" port="8080" server="container" contextpath="dubbo-service/rpc"/>
+	
 	<!--此处为使用spring激活本地服务 这里采用xml 也可以使用注解扫描包的方式 -->
 	<bean id="defaultDemoApi" class="org.dubbo.service.DefaultDemoApi" />
 	<!--暴露服务 -->
 	<dubbo:service interface="org.dubbo.api.DemoApi" ref="defaultDemoApi" />
+	
+	<bean id="str" class="java.lang.String">
+	  <constructor-arg value="string of spring bean"/>
+	</bean>
 </beans>
